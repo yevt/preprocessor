@@ -1,0 +1,10 @@
+{
+  "name": "preprocessor",
+  "description": "Preprocessot transform task for browserify",
+  "author": "A confused individual <iam@confused.com>",
+  "version": "0.0.1",
+  "dependencies": {
+    "through": "~2.3.4"
+  },
+  "engine": "node 0.4.1"
+}
