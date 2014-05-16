@@ -6,7 +6,7 @@ module.exports = function(context) {
 
   var preprocess = function(file, src, callback) {
     var preprocessIfThenElse = function() {
-      re_if = /(?:^[^\n]*# *if ([^\n]+?)(?:-->)?$)([\s\S]+?)(?:(?:^[^\n]*# *else[^\n]*$)([\s\S]+?))?(?:^[^\n]*# *endif[^\n]*$)/gm;
+      re_if = /(?:^[^\n]*# {0,1}if ([^\n]+?)(?:-->)?$)([\s\S]+?)(?:(?:^[^\n]*# *else[^\n]*$)([\s\S]+?))?(?:^[^\n]*# *endif[^\n]*$)/gm;
       src = src.replace(re_if, function(match, condition, ifcode, elsecode) {
         if (elsecode == null) {
           elsecode = '';
